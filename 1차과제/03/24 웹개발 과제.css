@@ -1,0 +1,8 @@
+.semantic {font-size: 50px; color: blue;}
+.div {border: 2px solid green; width: 50% ;margin-top: 15px; margin-bottom: 10px;}
+.nav {border: 2px solid rgb(0, 122, 128); background-color: aquamarine; padding-top: 15px;}
+.header {border: 2px solid red; padding: 5px; margin-bottom: 20px;}
+#sec1 {border: 2px solid blue; background-color: rgb(121, 194, 246); padding: 5px; margin-top: 20px; margin-bottom: 20px;}
+.sec2 {background-color: rgb(127, 228, 88); padding: 5px; margin-top: 20px; margin-bottom: 20px;}
+.article1 {background-color: rgb(231, 189, 225);}
+.article2 {background-color: coral;}
