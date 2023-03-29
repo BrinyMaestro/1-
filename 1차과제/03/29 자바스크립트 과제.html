@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="29 자바스크립트 과제.css">
+</head>
+<body>
+    <h1>멍머이를 고르세요!</h1>
+
+    <div class="pic1">1</div> 
+    <div class="pic2">2</div> 
+    <div class="pic3">3</div>
+
+
+    <p style="clear: both;"></p>
+
+    <img src="https://img2.quasarzone.com/editor/2021/07/08/c8dce6eed4000c9430442213ce76cfcb.png" alt="" style="clear:both;" >
+
+    <script>
+        const 멍머이 = document.querySelector("img")
+
+        let 사진1 = document.querySelector(".pic1")
+        let 사진2 = document.querySelector(".pic2")
+        let 사진3 = document.querySelector(".pic3")
+
+        사진1.addEventListener("click", function () {
+            멍머이.setAttribute("src","https://img2.quasarzone.com/editor/2021/07/08/c8dce6eed4000c9430442213ce76cfcb.png")
+        })
+        사진2.addEventListener("click", function () {
+            멍머이.setAttribute("src","https://img2.quasarzone.com/editor/2021/12/24/9db4869b12f3054440934f099308e0aa.png")
+        })
+        사진3.addEventListener("click", function () {
+            멍머이.setAttribute("src","https://img2.quasarzone.com/editor/2021/07/01/d5009ffa11f3bf55aa7035f6827caac3.png")
+        })
+
+        
+
+    </script>
+
+
+</body>
+</html>
