@@ -1,0 +1,11 @@
+#private {
+    font-size: 11pt;
+    font-weight: bold;
+}
+
+button {
+    border: none;
+    background-color: rgb(200, 212, 222);
+    border-radius: 2px;
+    box-shadow: black 1px 1px 1px;
+}
