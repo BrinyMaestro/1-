@@ -1,0 +1,27 @@
+#login {
+    font-weight: bold;
+    font-size: 8pt;
+}
+
+fieldset {
+    border: none;
+    background-color: rgb(158, 207, 251);
+    padding: 20px;
+}
+
+#form {
+    font-size: 8pt;
+}
+
+p {
+    font-weight: bold;
+    font-size: 8pt;
+}
+
+h1 {
+    color: blue;
+}
+
+h3 {
+   color: blue; 
+}
