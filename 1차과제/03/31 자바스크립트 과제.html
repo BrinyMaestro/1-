@@ -18,21 +18,17 @@
     <button>제출</button>
     
     <script>
+        let name 
+        let age
+        let gender
 
         const 이름 = document.querySelector("#name")
         const 나이 = document.querySelector("#age")
         const 성별 = document.querySelector("#gender")
 
-        let name 
-        name = 이름.value
-        let age
-        age = 나이.value
-        let gender
-        gender = 성별.value
-
         const 버튼 = document.querySelector("button")
         버튼.addEventListener("click", function () {
-            confirm(`${name}님 ${age}세 ${gender} 맞습니까?`)
+            confirm(`${name = 이름.value}님 ${age = 나이.value}세 ${gender = 성별.value} 맞습니까?`)
         })
 
     </script>
