@@ -15,24 +15,25 @@
     <button>계산</button>
     <hr>
 
-    <h1>BMI 수치 :</h1>
+    <h1>BMI 수치 : <span id="bmi"></span></h1>
     
     <script>
         const 키 = document.querySelector("#height")
         const 체중 = document.querySelector("#weight")
 
         let 입력한키
-        입력한키 = 키.value
         let 입력한체중
-        입력한체중 = 체중.value
-
         let bmi
+
+        const bmi지정 = document.querySelector("#bmi")
         
         const 버튼 = document.querySelector("button")
         버튼.addEventListener("click", function() {
+            입력한키 = 키.value / 100
+            입력한체중 = 체중.value
             bmi = 입력한체중 / (입력한키*입력한키)
-            console.log(입력한키)
-            console.log(입력한체중)
+            
+            bmi지정.innerHTML = bmi.toFixed(3)
         })
         
     </script>
