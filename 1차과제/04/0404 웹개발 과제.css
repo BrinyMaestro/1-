@@ -2,3 +2,16 @@
     font-size: 10pt;
     font-weight: bold;
 }
+
+.prive {
+    font-size:9pt;
+}
+
+h5 {
+    line-height: 0px;
+}
+
+.last {
+    font-size: 9pt; 
+    line-height:20px;
+}
