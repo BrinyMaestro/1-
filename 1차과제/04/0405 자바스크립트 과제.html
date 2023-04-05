@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="0405 자바스크립트 과제.css">
+
+</head>
+<body>
+    <h1>마우스로 술래잡기</h1>
+
+    <button id="button1">술래잡기 시작</button>
+
+    <br>
+
+    <div id="box1"><h1>박스1</h1></div> 
+    <div id="box2"><h1>박스2</h1></div>
+    <div id="box3"><h1>박스3</h1></div>
+    
+    
+    <script>
+
+        const 박스1 = document.querySelector("#box1")
+        const 박스2 = document.querySelector("#box2")
+        const 박스3 = document.querySelector("#box3")
+        
+        let 이미지
+        이미지 = document.createElement("img")
+        이미지.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3i0Dy4AJltOdpZFER1NALcMlnxIVwmX_1fQ&usqp=CAU")
+
+        let 티모위치 
+
+        const 버튼 = document.querySelector("#button1")
+        버튼.addEventListener("click", function() {
+            박스1.appendChild(이미지)
+            티모위치 = 1
+        })
+
+        이미지.addEventListener("mouseover", function() {
+            if (티모위치 == 1) {
+                박스1.removeChild(이미지)
+                박스2.appendChild(이미지)
+                티모위치 = 2
+            }
+            else if (티모위치 == 2) {
+                박스2.removeChild(이미지)
+                박스3.appendChild(이미지)
+                티모위치 = 3
+            }
+            else if (티모위치 == 3) {
+                박스3.removeChild(이미지)
+                박스1.appendChild(이미지)
+                티모위치 = 1
+            }
+
+        })
+
+    </script>
+
+</body>
+</html>
