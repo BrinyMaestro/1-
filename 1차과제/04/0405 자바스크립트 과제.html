@@ -13,6 +13,7 @@
     <h1>마우스로 술래잡기</h1>
 
     <button id="button1">술래잡기 시작</button>
+    <button id="button2">술래잡기 종료</button>
 
     <br>
 
@@ -41,35 +42,23 @@
 
         이미지.addEventListener("mouseover", function() {
             if (티모위치 == 1) {
-                박스1.removeChild(이미지)
                 박스2.appendChild(이미지)
                 티모위치 = 2
             }
-            else if (티모위치 == 2) {
-                박스2.removeChild(이미지)
+            else if (티모위치 == 2) {                
                 박스3.appendChild(이미지)
                 티모위치 = 3
             }
-            else if (티모위치 == 3) {
-                박스3.removeChild(이미지)
+            else if (티모위치 == 3) {   
                 박스1.appendChild(이미지)
                 티모위치 = 1
             }
 
         })
 
-    </script>
-
-    <p style="clear:both"></p>
-
-    <br>
-
-    <button id="button2">술래잡기 종료</button>
-
-    <script>
         const 버튼2 = document.querySelector("#button2")
         버튼2.addEventListener("click", function() {
-            박스1.removeChild(이미지)
+            박스1.removeChild(이미지)  
         })
         버튼2.addEventListener("click", function() {
             박스2.removeChild(이미지)
@@ -79,6 +68,8 @@
         })
 
     </script>
+
+    <p style="clear:both"></p>
 
 
 
