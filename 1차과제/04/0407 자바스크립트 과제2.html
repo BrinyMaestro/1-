@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>이번 추석에 가고 싶은 곳(a, s, d, f)</h1>
+
+    <div style="border: 2px solid black; width:800px; height: 500px; text-align: center; padding-top: 10px;">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/b1/23/0d/20181209-084820-largejpg.jpg?w=1400&h=-1&s=1" alt="" width="500px" height="400px">
+        <h1 class="장소">양평</h1>
+    </div>
+
+    <script>
+
+        const 이미지 = document.querySelector("img")
+        const 장소 = document.querySelector(".장소")
+
+        document.addEventListener("keyup", function(event) {
+            if (event.key == "a") {
+                이미지.setAttribute("src", "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/b1/23/0d/20181209-084820-largejpg.jpg?w=1400&h=-1&s=1")
+                장소.innerHTML = "양평"
+            }
+            else if (event.key == "s") {
+                이미지.setAttribute("src", "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/01/20/29/d1/caption.jpg?w=2400&h=-1&s=1")
+                장소.innerHTML = "수원"
+            }
+            else if (event.key == "d") {
+                이미지.setAttribute("src", "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/3b/1f/b3/caption.jpg?w=2000&h=-1&s=1")
+                장소.innerHTML = "이천"
+            }
+            else if (event.key == "f") {
+                이미지.setAttribute("src", "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/21/87/c8/10.jpg?w=1400&h=-1&s=1")
+                장소.innerHTML = "가평"
+            }
+        })
+    </script>
+
+</body>
+</html>
