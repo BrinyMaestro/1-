@@ -8,9 +8,9 @@ header {
     height: 100px;
     width: 100%;
 }
-h2 {
+.title {
     color: white;
-    line-height: 50px;
+    line-height: 60px;
 }
 li {
     display: inline-block;
@@ -32,11 +32,12 @@ section {
 }
 
 .body-box {
+    box-sizing: border-box;
     border: 3px solid black;
     width: 400px; height: 300px;
     display: inline-block;
-    padding: 20px;
     margin: 10px;
+    padding: 20px;
 }
 
 .bottom-box {
