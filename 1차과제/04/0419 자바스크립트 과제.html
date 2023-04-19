@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>애국가 타자연습</h1>
+    <p>타이핑을 하여 내용이 일치하면 ok표시</p>
+    <p>ok 표시를 위한 태그는 span태그 사용 권장</p>
+    
+    <hr>
+
+    <h1>input 이벤트와 조건문을 활용</h1>
+    <h2>값을 입력하면 맞는지 점검함</h2>
+    <label for="">동해물과 <input type="text" class="box1"></label> <span class="span1"></span>
+    <br><br>
+    <label for="">백두산이 <input type="text" class="box2"></label> <span class="span2"></span>
+    <br>
+
+    <h1>키보드 이벤트 활용</h1>
+    <h2>Enter를 누르면 확인함</h2>
+    <label for="">마르고 <input type="text" class="box3"></label> <span class="span3"></span>
+    <br><br>
+    <label for="">닳도록 <input type="text" class="box4"></label> <span class="span4"></span>
+    
+    <script>
+        const 박스1 = document.querySelector(".box1")
+        const 박스2 = document.querySelector(".box2")
+        const 박스3 = document.querySelector(".box3")
+        const 박스4 = document.querySelector(".box4")
+
+        const 답1 = document.querySelector(".span1")
+        const 답2 = document.querySelector(".span2")
+        const 답3 = document.querySelector(".span3")
+        const 답4 = document.querySelector(".span4")
+        
+        박스1.addEventListener("input", () => {
+            if (박스1.value == "동해물과") {
+                답1.textContent = "ok"
+            }
+            else {
+                답1.textContent = "x"
+            }
+        })
+
+        박스2.addEventListener("input", () => {
+            if (박스2.value == "백두산이") {
+                답2.textContent = "ok"
+            }
+            else {
+                답2.textContent = "x"
+            }
+        })
+
+        박스3.addEventListener("keydown", (e) => {
+            if (e.key == "Enter") {
+                if (박스3.value == "마르고") {
+                    답3.textContent = "ok"
+                }
+                else {
+                    답3.textContent = "x"
+                }
+            }
+        })
+
+        박스4.addEventListener("keydown", (e) => {
+            if (e.key == "Enter") {
+                if (박스4.value == "닳도록") {
+                    답4.textContent = "ok"
+                }
+                else {
+                    답4.textContent = "x"
+                }
+            }
+        })
+
+    </script>
+
+</body>
+</html>
