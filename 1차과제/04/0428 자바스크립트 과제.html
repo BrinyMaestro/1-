@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>주문서</h1>
+    <h3>먹고 싶은 메뉴를 선택합니다</h3>
+
+    <label for=""><input type="checkbox" value = "치킨" class="치킨"> 치킨 16,000 \</label>
+    <br><br>
+    <label for=""><input type="checkbox" value = "초밥" class="초밥"> 초밥 20,000\</label>
+    <br><br>
+    <label for=""><input type="checkbox" value = "순대" class="순대"> 순대 5,000 \</label>
+    <hr>
+
+    <h2 class="가격">가격 : <span></span></h2>
+    
+
+    <script>
+        let 총가격 = document.querySelector("span")
+
+        let 가격 = 0
+
+        let 체크1 = document.querySelector(".치킨")
+        체크1.addEventListener("change", () => {
+            if (체크1.checked) {
+                가격 = 가격 + 16000
+            }
+            else {
+                가격 = 가격 - 16000
+            }   
+            총가격.textContent = 가격
+                        
+        })
+        let 체크2 = document.querySelector(".초밥")
+        체크2.addEventListener("change", () => {
+            if (체크2.checked) {
+                가격 = 가격 + 20000
+            }
+            else {
+                가격 = 가격 - 20000
+            }
+            총가격.textContent = 가격
+            
+        })
+        let 체크3 = document.querySelector(".순대")
+        체크3.addEventListener("change", () => {
+            if (체크3.checked) {
+                가격 = 가격 + 5000
+            }
+            else {
+                가격 = 가격 - 5000
+            }
+            총가격.textContent = 가격
+            
+        })
+       
+    </script>
+    
+</body>
+</html>
