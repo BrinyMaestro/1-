@@ -1,0 +1,53 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+.container {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 200px;
+    gap: 10px;
+}
+
+.head {
+    position: relative;
+    top: 15px;
+    grid-column: 1/4;
+    text-align: center;
+}
+
+.item {
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    background-image: url('https://preview.free3d.com/img/2017/09/2704957626197739490/3ywedicf.jpg');
+    background-size: cover;
+}
+
+.box {
+    transition: 1s;
+}
+
+.text {
+    position: relative;
+    bottom: 200px;
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.331);
+    opacity: 1;
+}
+
+.text > h2 {
+    color: white;
+}
+
+.text > p {
+    color: yellow;
+}
+
+.box:hover .text {
+    opacity: 1;
+    transform: translate(0, -200px);
+}
