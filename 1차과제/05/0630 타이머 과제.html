@@ -30,9 +30,15 @@
             clearInterval(타이머함수)
             let sec = 0
             sec = 입력.value
+            if (입력.value <= 0) {
+                sec = 0
+            }
             초.textContent = sec 
             타이머함수 = setInterval(
                 function 타이머() {
+                if (sec <= 0) {
+                    sec = 1
+                }
                 sec -= 1
                 초.textContent = sec 
                 if (sec == 0) {
