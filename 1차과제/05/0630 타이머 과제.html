@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="0630 타이머 과제.css">
+</head>
+<body>
+    <div class="container">
+        <div class="label">시간 설정 <input type="number">초 <button>시작</button></div>
+        <h1>남은 시간</h1>
+
+        <span class="time">60</span><span class="s">s</span>
+
+        <p>초 입력하고 버튼을 누르면, 입력한 시간대로 타이머가 작동한다</p>
+    </div>
+
+
+    <script>
+        let 초 = document.querySelector(".time")
+        let 버튼 = document.querySelector("button")
+        let 입력 = document.querySelector("input")
+        let sec = 0
+         
+        let 타이머함수
+
+        버튼.addEventListener("click", function(){
+            clearInterval(타이머함수)
+            let sec = 0
+            sec = 입력.value
+            초.textContent = sec 
+            타이머함수 = setInterval(
+                function 타이머() {
+                sec -= 1
+                초.textContent = sec 
+                if (sec == 0) {
+                    clearInterval(타이머함수)
+                }
+            }, 1000)
+        })
+
+    </script>
+</body>
+</html>
