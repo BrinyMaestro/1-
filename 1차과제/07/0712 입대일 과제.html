@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input {
+            width: 150px; padding: 10px;
+        }
+        button {
+            width: 45px; height: 40px; margin-left: 5px;
+        }
+        h2 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>입대일은 만 19세가 되는 날을 기준</h1>
+    <label for=""><input type="text" value="2005.8.1"><button>계산</button></label>
+    <h2>결과</h2>
+  
+    <script>
+        let 오늘 = [2023, 7, 12]
+        let 생일
+        let 나이
+        let 결과 = document.querySelector("h2")
+        
+        let 버튼 = document.querySelector("button")
+        버튼.addEventListener("click", function(){
+            let 입력 = document.querySelector("input")
+            생일 = 입력.value.split(".")
+
+            if (생일[1] == 오늘[1] && 생일[2] < 오늘[2]) {
+                나이 = 오늘[0] - 생일[0]
+            }
+            else if (생일[1] < 오늘[1]) {
+                나이 = 오늘[0] - 생일[0]
+            }
+            else {
+                나이 = 오늘[0] - 생일[0] - 1
+            }
+
+            console.log(`나이는 ${나이}`)
+
+            if (나이 < 19) {
+                console.log("응애")
+                결과.textContent = "입대 불가능"
+            }
+            else {
+                console.log("입대 ㄱㄴ")
+                결과.textContent = "입대 가능"
+            }
+        })
+    </script>
+</body>
+</html>
